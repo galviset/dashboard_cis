@@ -1,0 +1,30 @@
+body
+{
+    background-image: url("../img/anime_278.gif");  
+}
+h1
+{
+	text-align: center;
+    font-style: strong;  /* texte du message en gras */
+	font-size: 70px;
+}
+#windfinder
+{
+	position:absolute; left:40px; top:400px; width: 32.3%; margin: 0 auto;
+} 
+#shom
+{
+	position:absolute; right:-10px; top:150px; margin: 0 auto;
+	transform: scaleX(0.8) scaleY(0.8);
+}
+#meteofrance
+{
+	position:absolute; left:100px; top:250px;
+}
+
+h6
+{
+    font-size: 100px;  /* texte du message 100 pixels */
+
+    font-style: strong;  /* texte du message en gras */
+} 

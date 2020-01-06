@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<!-- Debut code vignette  Météo -->
+	<div id="windfinder">
+		<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/cap_d_erquy?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kmh&days=2&show_day=1"></script>
+	</div>
+	<!-- FIN   -->
+	<!-- Debut code vignette  marèe -->
+	<div id="shom">
+		<script src="https://services.data.shom.fr/hdm/vignette/grande/ERQUY_PORT?locale=fr"></script>
+	</div>
+	<!-- FIN   -->
+	<!-- Debut code vignette vigilance départementale  Météo-France -->
+	<div id="meteofrance">
+		<iframe src="https://vigilance.meteofrance.com/vignette_vigi_dep.html?a=22&b="  width="426" height="91" frameborder="0">
+		<p>Votre navigateur est incompatible avec les iframes.</p>
+		</iframe>
+	</div>
+	<!-- FIN   -->
+	<!-- Debut code vignette  Pendule -->
+	<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/fr/city/2983990"><span style="color:gray;">Heure actuelle</span><br />Rennes, France</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=large&timezone=Europe%2FParis" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+	<!-- FIN   --> 
+	<!-- Debut code vignette  message urgent -->  
+	<h6><marquee>Le texte à faire défiler</marquee></h6>
+	<!-- FIN   --> 
+{% endblock %}
