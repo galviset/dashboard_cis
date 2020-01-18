@@ -1,6 +1,9 @@
-body
+html, body
 {
-    background-image: url("../img/anime_278.gif");  
+    background-image: url("../img/background.jpg");  
+    background-size: 1920px 1080px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 h1
 {
@@ -10,18 +13,42 @@ h1
     font-style: strong;  /* texte du message en gras */
 	font-size: 70px;
 }
+marquee
+{
+	position: absolute;
+	left: 0px;
+	bottom: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 70px;
+}
+#announcement
+{
+	position: absolute;
+	bottom: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 70px;
+	animation: ann-move 40s infinite;
+	animation-timing-function: linear;
+	overflow: hidden;
+	white-space: nowrap;
+}
+@keyframes ann-move {
+  from {right: 0px; transform:translateX(100%); transform-origin: top right;}
+  to {right: 1920px; transform:translateX(0%); transform-origin: top right;}
+}
+
 #windfinder
 {
-	position:absolute; left:40px; top:400px; width: 32.3%; margin: 0 auto;
+	position:absolute; left:278px; top:460px; width: 32.3%; margin: 0 auto; transform: scale(1.25, 1.25);
 } 
 #shom
 {
-	position:absolute; right:-10px; top:150px; margin: 0 auto;
-	transform: scaleX(0.8) scaleY(0.8);
+	position:absolute; right:158px; top:120px; margin: 0 auto;
+	transform: scale(0.9, 0.9)
 }
 #meteofrance
 {
-	position:absolute; left:100px; top:250px;
+	position:absolute; left:376px; top:250px; transform: scale(1.8, 1.8);
 }
 
 h6
@@ -33,16 +60,16 @@ h6
 
 #ejs_heure {
 	position: absolute;
-	top: 60 px;
+	top: 50px;
 	font-size: 50;
 }
 
 .ext {
 	position: absolute;
 	top : 120px;
-	left : 140px;
-	width: 1640px; /* largeur de diapo : 1640px */
-	height: 930px; /* hauteur de diapo : 900px (la barre fait 30px) */
+	left : 198px;
+	width: 1524px; /* largeur de diapo : 1640px */
+	height: 865px; /* hauteur de diapo : 900px (la barre fait 30px) */
 	overflow: hidden;
 }
 
@@ -58,4 +85,12 @@ h6
   10%  {opacity: 1}
   90% {opacity: 1}
   to {opacity: 0}
+}
+
+#signature
+{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 12px;
 }
