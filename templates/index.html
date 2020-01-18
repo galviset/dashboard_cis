@@ -1,27 +1,65 @@
 {% extends "layout.html" %}
 
 {% block content %}
-	<!-- Debut code vignette  Météo -->
-	<div id="windfinder">
-		<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/cap_d_erquy?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kmh&days=2&show_day=1"></script>
+	<div class="page">
+		<!-- Debut code vignette  Météo -->
+		<div id="windfinder">
+			<script type="text/javascript" src="https://www.windfinder.com/widget/forecast/js/cap_d_erquy?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kmh&days=2&show_day=1"></script>
+		</div>
+		<!-- FIN   -->
+		<!-- Debut code vignette  marèe -->
+		<div id="shom">
+			<script src="https://services.data.shom.fr/hdm/vignette/grande/ERQUY_PORT?locale=fr"></script>
+		</div>
+		<!-- FIN   -->
+		<!-- Debut code vignette vigilance départementale  Météo-France -->
+		<div id="meteofrance">
+			<iframe src="https://vigilance.meteofrance.com/vignette_vigi_dep.html?a=22&b="  width="426" height="91" frameborder="0">
+			<p>Votre navigateur est incompatible avec les iframes.</p>
+			</iframe>
+		</div>
+		<!-- FIN   -->
+		<!-- Debut code vignette  Pendule -->
+
+		<!-- FIN   --> 
+		<!-- Debut code vignette  message urgent -->  
+		<h6><marquee>Le texte à faire défiler</marquee></h6>
+		<!-- FIN   --> 
 	</div>
-	<!-- FIN   -->
-	<!-- Debut code vignette  marèe -->
-	<div id="shom">
-		<script src="https://services.data.shom.fr/hdm/vignette/grande/ERQUY_PORT?locale=fr"></script>
+	<div class="page">
+		<iframe class="ext" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FParis&amp;src=Y2lzZXJxdXlAZ21haWwuY29t&amp;src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%2322AA99&amp;color=%231F753C" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	</div>
-	<!-- FIN   -->
-	<!-- Debut code vignette vigilance départementale  Météo-France -->
-	<div id="meteofrance">
-		<iframe src="https://vigilance.meteofrance.com/vignette_vigi_dep.html?a=22&b="  width="426" height="91" frameborder="0">
-		<p>Votre navigateur est incompatible avec les iframes.</p>
-		</iframe>
+	<div class="page">
+		<iframe class="ext" src="https://docs.google.com/presentation/d/e/2PACX-1vSYdHz7gZ_Nc4dyJunFCfJ87ZNNWblOzvRPSZFvmejSu-yJLQLbowFzT8rC3AkAWKOr4QZtgHQxbOlC/embed?start=false&loop=false&delayms=3000"></iframe>
 	</div>
-	<!-- FIN   -->
-	<!-- Debut code vignette  Pendule -->
-	<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/fr/city/2983990"><span style="color:gray;">Heure actuelle</span><br />Rennes, France</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=large&timezone=Europe%2FParis" width="100%" height="140" frameborder="0" seamless></iframe> </div>
-	<!-- FIN   --> 
-	<!-- Debut code vignette  message urgent -->  
-	<h6><marquee>Le texte à faire défiler</marquee></h6>
-	<!-- FIN   --> 
+	<div class="page">
+		<iframe class="ext" src="https://docs.google.com/presentation/d/e/2PACX-1vTOJ9o8_yua8naki_b1MEq5vP7j1xD4gDBI766YKtf0LdC0utfyJSkmK4FcKpSBUS2sHIRaKYU1YGAm/embed?start=false&loop=false&delayms=3000"></iframe>
+	</div>
+	<div class="page">
+		<iframe class="ext" src="https://docs.google.com/presentation/d/e/2PACX-1vRg-GPX39Hvza_ZY1z7dWKnFPyVGYaowpy1V904E5gOwLp7KdWvmggzHZFVTlm05CLx53t1ggmPsCOw/embed?start=false&loop=false&delayms=3000"></iframe>
+	</div>
+	<div class="page">
+		<iframe class="ext" src="https://docs.google.com/presentation/d/e/2PACX-1vRFhsVeT6hBqotZ_aaWD_vNc3dgpbXBioqkVhtiutX-dw6TGFhZH5IcvGPjAIM31H9nQ3lSkUIrTpxM/embed?start=false&loop=false&delayms=3000"></iframe>
+	</div>
+	
+	<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("page");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}
+	  slides[slideIndex-1].style.display = "block";
+	  slides[slideIndex-1].style.animation = "fadeout 5s 1";
+	  setTimeout(showSlides, 5000); // Change image every 2 seconds
+	} 
+	</script>
+	
+	
 {% endblock %}
+

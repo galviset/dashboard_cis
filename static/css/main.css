@@ -4,6 +4,8 @@ body
 }
 h1
 {
+	position: relative;
+	top: -25px;
 	text-align: center;
     font-style: strong;  /* texte du message en gras */
 	font-size: 70px;
@@ -28,3 +30,32 @@ h6
 
     font-style: strong;  /* texte du message en gras */
 } 
+
+#ejs_heure {
+	position: absolute;
+	top: 60 px;
+	font-size: 50;
+}
+
+.ext {
+	position: absolute;
+	top : 120px;
+	left : 140px;
+	width: 1640px; /* largeur de diapo : 1640px */
+	height: 930px; /* hauteur de diapo : 900px (la barre fait 30px) */
+	overflow: hidden;
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  10%  {opacity: 1}
+  90% {opacity: 1}
+  to {opacity: 0}
+}
+
+@-webkit-keyframes fadeout {
+  from {opacity: 0}
+  10%  {opacity: 1}
+  90% {opacity: 1}
+  to {opacity: 0}
+}
